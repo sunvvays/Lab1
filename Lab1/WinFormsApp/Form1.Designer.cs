@@ -17,184 +17,185 @@
 
         private void InitializeComponent()
         {
-            this.labelFilms = new System.Windows.Forms.Label();
-            this.listBoxFilms = new System.Windows.Forms.ListBox();
-            this.labelTitle = new System.Windows.Forms.Label();
-            this.textBoxTitle = new System.Windows.Forms.TextBox();
-            this.labelGenre = new System.Windows.Forms.Label();
-            this.textBoxGenre = new System.Windows.Forms.TextBox();
-            this.labelYear = new System.Windows.Forms.Label();
-            this.textBoxYear = new System.Windows.Forms.TextBox();
-            this.buttonAdd = new System.Windows.Forms.Button();
-            this.buttonUpdate = new System.Windows.Forms.Button();
-            this.buttonDelete = new System.Windows.Forms.Button();
-            this.labelSearchYear = new System.Windows.Forms.Label();
-            this.textBoxSearchYear = new System.Windows.Forms.TextBox();
-            this.buttonSearchYear = new System.Windows.Forms.Button();
-            this.buttonGroupByGenre = new System.Windows.Forms.Button();
-            this.SuspendLayout();
+            labelFilms = new Label();
+            labelTitle = new Label();
+            textBoxTitle = new TextBox();
+            labelGenre = new Label();
+            textBoxGenre = new TextBox();
+            labelYear = new Label();
+            textBoxYear = new TextBox();
+            buttonAdd = new Button();
+            buttonUpdate = new Button();
+            buttonDelete = new Button();
+            labelSearchYear = new Label();
+            textBoxSearchYear = new TextBox();
+            buttonSearchYear = new Button();
+            buttonGroupByGenre = new Button();
+            dataGridViewFilms = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridViewFilms).BeginInit();
+            SuspendLayout();
             // 
             // labelFilms
             // 
-            this.labelFilms.AutoSize = true;
-            this.labelFilms.Location = new System.Drawing.Point(10, 10);
-            this.labelFilms.Name = "labelFilms";
-            this.labelFilms.Size = new System.Drawing.Size(105, 15);
-            this.labelFilms.TabIndex = 0;
-            this.labelFilms.Text = "Список фильмов:";
-            // 
-            // listBoxFilms
-            // 
-            this.listBoxFilms.FormattingEnabled = true;
-            this.listBoxFilms.ItemHeight = 15;
-            this.listBoxFilms.Location = new System.Drawing.Point(10, 30);
-            this.listBoxFilms.Name = "listBoxFilms";
-            this.listBoxFilms.Size = new System.Drawing.Size(260, 304);
-            this.listBoxFilms.TabIndex = 1;
-            this.listBoxFilms.SelectedIndexChanged += new System.EventHandler(this.listBoxFilms_SelectedIndexChanged);
+            labelFilms.AutoSize = true;
+            labelFilms.Location = new Point(10, 10);
+            labelFilms.Name = "labelFilms";
+            labelFilms.Size = new Size(105, 15);
+            labelFilms.TabIndex = 0;
+            labelFilms.Text = "Список фильмов:";
             // 
             // labelTitle
             // 
-            this.labelTitle.AutoSize = true;
-            this.labelTitle.Location = new System.Drawing.Point(280, 10);
-            this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(63, 15);
-            this.labelTitle.TabIndex = 2;
-            this.labelTitle.Text = "Название:";
+            labelTitle.AutoSize = true;
+            labelTitle.Location = new Point(418, 9);
+            labelTitle.Name = "labelTitle";
+            labelTitle.Size = new Size(62, 15);
+            labelTitle.TabIndex = 2;
+            labelTitle.Text = "Название:";
             // 
             // textBoxTitle
             // 
-            this.textBoxTitle.Location = new System.Drawing.Point(280, 30);
-            this.textBoxTitle.Name = "textBoxTitle";
-            this.textBoxTitle.Size = new System.Drawing.Size(300, 23);
-            this.textBoxTitle.TabIndex = 3;
+            textBoxTitle.Location = new Point(416, 30);
+            textBoxTitle.Name = "textBoxTitle";
+            textBoxTitle.Size = new Size(300, 23);
+            textBoxTitle.TabIndex = 3;
             // 
             // labelGenre
             // 
-            this.labelGenre.AutoSize = true;
-            this.labelGenre.Location = new System.Drawing.Point(280, 60);
-            this.labelGenre.Name = "labelGenre";
-            this.labelGenre.Size = new System.Drawing.Size(41, 15);
-            this.labelGenre.TabIndex = 4;
-            this.labelGenre.Text = "Жанр:";
+            labelGenre.AutoSize = true;
+            labelGenre.Location = new Point(419, 62);
+            labelGenre.Name = "labelGenre";
+            labelGenre.Size = new Size(41, 15);
+            labelGenre.TabIndex = 4;
+            labelGenre.Text = "Жанр:";
             // 
             // textBoxGenre
             // 
-            this.textBoxGenre.Location = new System.Drawing.Point(280, 80);
-            this.textBoxGenre.Name = "textBoxGenre";
-            this.textBoxGenre.Size = new System.Drawing.Size(300, 23);
-            this.textBoxGenre.TabIndex = 5;
+            textBoxGenre.Location = new Point(418, 80);
+            textBoxGenre.Name = "textBoxGenre";
+            textBoxGenre.Size = new Size(300, 23);
+            textBoxGenre.TabIndex = 5;
             // 
             // labelYear
             // 
-            this.labelYear.AutoSize = true;
-            this.labelYear.Location = new System.Drawing.Point(280, 110);
-            this.labelYear.Name = "labelYear";
-            this.labelYear.Size = new System.Drawing.Size(80, 15);
-            this.labelYear.TabIndex = 6;
-            this.labelYear.Text = "Год выпуска:";
+            labelYear.AutoSize = true;
+            labelYear.Location = new Point(416, 106);
+            labelYear.Name = "labelYear";
+            labelYear.Size = new Size(78, 15);
+            labelYear.TabIndex = 6;
+            labelYear.Text = "Год выпуска:";
+            labelYear.Click += labelYear_Click;
             // 
             // textBoxYear
             // 
-            this.textBoxYear.Location = new System.Drawing.Point(280, 130);
-            this.textBoxYear.Name = "textBoxYear";
-            this.textBoxYear.Size = new System.Drawing.Size(100, 23);
-            this.textBoxYear.TabIndex = 7;
+            textBoxYear.Location = new Point(416, 124);
+            textBoxYear.Name = "textBoxYear";
+            textBoxYear.Size = new Size(100, 23);
+            textBoxYear.TabIndex = 7;
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Location = new System.Drawing.Point(280, 170);
-            this.buttonAdd.Name = "buttonAdd";
-            this.buttonAdd.Size = new System.Drawing.Size(85, 26);
-            this.buttonAdd.TabIndex = 8;
-            this.buttonAdd.Text = "Добавить";
-            this.buttonAdd.UseVisualStyleBackColor = true;
-            this.buttonAdd.Click += new System.EventHandler(this.buttonAdd_Click);
+            buttonAdd.Location = new Point(416, 170);
+            buttonAdd.Name = "buttonAdd";
+            buttonAdd.Size = new Size(85, 26);
+            buttonAdd.TabIndex = 8;
+            buttonAdd.Text = "Добавить";
+            buttonAdd.UseVisualStyleBackColor = true;
+            buttonAdd.Click += buttonAdd_Click;
             // 
             // buttonUpdate
             // 
-            this.buttonUpdate.Location = new System.Drawing.Point(375, 170);
-            this.buttonUpdate.Name = "buttonUpdate";
-            this.buttonUpdate.Size = new System.Drawing.Size(85, 26);
-            this.buttonUpdate.TabIndex = 9;
-            this.buttonUpdate.Text = "Обновить";
-            this.buttonUpdate.UseVisualStyleBackColor = true;
-            this.buttonUpdate.Click += new System.EventHandler(this.buttonUpdate_Click);
+            buttonUpdate.Location = new Point(527, 170);
+            buttonUpdate.Name = "buttonUpdate";
+            buttonUpdate.Size = new Size(85, 26);
+            buttonUpdate.TabIndex = 9;
+            buttonUpdate.Text = "Обновить";
+            buttonUpdate.UseVisualStyleBackColor = true;
+            buttonUpdate.Click += buttonUpdate_Click;
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Location = new System.Drawing.Point(470, 170);
-            this.buttonDelete.Name = "buttonDelete";
-            this.buttonDelete.Size = new System.Drawing.Size(85, 26);
-            this.buttonDelete.TabIndex = 10;
-            this.buttonDelete.Text = "Удалить";
-            this.buttonDelete.UseVisualStyleBackColor = true;
-            this.buttonDelete.Click += new System.EventHandler(this.buttonDelete_Click);
+            buttonDelete.Location = new Point(633, 170);
+            buttonDelete.Name = "buttonDelete";
+            buttonDelete.Size = new Size(85, 26);
+            buttonDelete.TabIndex = 10;
+            buttonDelete.Text = "Удалить";
+            buttonDelete.UseVisualStyleBackColor = true;
+            buttonDelete.Click += buttonDelete_Click;
             // 
             // labelSearchYear
             // 
-            this.labelSearchYear.AutoSize = true;
-            this.labelSearchYear.Location = new System.Drawing.Point(280, 210);
-            this.labelSearchYear.Name = "labelSearchYear";
-            this.labelSearchYear.Size = new System.Drawing.Size(92, 15);
-            this.labelSearchYear.TabIndex = 11;
-            this.labelSearchYear.Text = "Поиск по году:";
+            labelSearchYear.AutoSize = true;
+            labelSearchYear.Location = new Point(416, 210);
+            labelSearchYear.Name = "labelSearchYear";
+            labelSearchYear.Size = new Size(89, 15);
+            labelSearchYear.TabIndex = 11;
+            labelSearchYear.Text = "Поиск по году:";
+            labelSearchYear.Click += labelSearchYear_Click;
             // 
             // textBoxSearchYear
             // 
-            this.textBoxSearchYear.Location = new System.Drawing.Point(375, 207);
-            this.textBoxSearchYear.Name = "textBoxSearchYear";
-            this.textBoxSearchYear.Size = new System.Drawing.Size(85, 23);
-            this.textBoxSearchYear.TabIndex = 12;
+            textBoxSearchYear.Location = new Point(517, 210);
+            textBoxSearchYear.Name = "textBoxSearchYear";
+            textBoxSearchYear.Size = new Size(85, 23);
+            textBoxSearchYear.TabIndex = 12;
             // 
             // buttonSearchYear
             // 
-            this.buttonSearchYear.Location = new System.Drawing.Point(470, 205);
-            this.buttonSearchYear.Name = "buttonSearchYear";
-            this.buttonSearchYear.Size = new System.Drawing.Size(110, 26);
-            this.buttonSearchYear.TabIndex = 13;
-            this.buttonSearchYear.Text = "Найти";
-            this.buttonSearchYear.UseVisualStyleBackColor = true;
-            this.buttonSearchYear.Click += new System.EventHandler(this.buttonSearchYear_Click);
+            buttonSearchYear.Location = new Point(608, 207);
+            buttonSearchYear.Name = "buttonSearchYear";
+            buttonSearchYear.Size = new Size(110, 26);
+            buttonSearchYear.TabIndex = 13;
+            buttonSearchYear.Text = "Найти";
+            buttonSearchYear.UseVisualStyleBackColor = true;
+            buttonSearchYear.Click += buttonSearchYear_Click;
             // 
             // buttonGroupByGenre
             // 
-            this.buttonGroupByGenre.Location = new System.Drawing.Point(280, 245);
-            this.buttonGroupByGenre.Name = "buttonGroupByGenre";
-            this.buttonGroupByGenre.Size = new System.Drawing.Size(200, 26);
-            this.buttonGroupByGenre.TabIndex = 14;
-            this.buttonGroupByGenre.Text = "Группировать по жанрам";
-            this.buttonGroupByGenre.UseVisualStyleBackColor = true;
-            this.buttonGroupByGenre.Click += new System.EventHandler(this.buttonGroupByGenre_Click);
+            buttonGroupByGenre.Location = new Point(419, 239);
+            buttonGroupByGenre.Name = "buttonGroupByGenre";
+            buttonGroupByGenre.Size = new Size(200, 29);
+            buttonGroupByGenre.TabIndex = 14;
+            buttonGroupByGenre.Text = "Группировать по жанрам";
+            buttonGroupByGenre.UseVisualStyleBackColor = true;
+            buttonGroupByGenre.Click += buttonGroupByGenre_Click;
+            // 
+            // dataGridViewFilms
+            // 
+            dataGridViewFilms.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewFilms.Location = new Point(10, 30);
+            dataGridViewFilms.Name = "dataGridViewFilms";
+            dataGridViewFilms.Size = new Size(400, 299);
+            dataGridViewFilms.TabIndex = 15;
             // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(600, 350);
-            this.Controls.Add(this.buttonGroupByGenre);
-            this.Controls.Add(this.buttonSearchYear);
-            this.Controls.Add(this.textBoxSearchYear);
-            this.Controls.Add(this.labelSearchYear);
-            this.Controls.Add(this.buttonDelete);
-            this.Controls.Add(this.buttonUpdate);
-            this.Controls.Add(this.buttonAdd);
-            this.Controls.Add(this.textBoxYear);
-            this.Controls.Add(this.labelYear);
-            this.Controls.Add(this.textBoxGenre);
-            this.Controls.Add(this.labelGenre);
-            this.Controls.Add(this.textBoxTitle);
-            this.Controls.Add(this.labelTitle);
-            this.Controls.Add(this.listBoxFilms);
-            this.Controls.Add(this.labelFilms);
-            this.Name = "Form1";
-            this.Text = "Фильмы";
-            this.ResumeLayout(false);
-            this.PerformLayout();
+            ClientSize = new Size(728, 341);
+            Controls.Add(dataGridViewFilms);
+            Controls.Add(buttonGroupByGenre);
+            Controls.Add(buttonSearchYear);
+            Controls.Add(textBoxSearchYear);
+            Controls.Add(labelSearchYear);
+            Controls.Add(buttonDelete);
+            Controls.Add(buttonUpdate);
+            Controls.Add(buttonAdd);
+            Controls.Add(textBoxYear);
+            Controls.Add(labelYear);
+            Controls.Add(textBoxGenre);
+            Controls.Add(labelGenre);
+            Controls.Add(textBoxTitle);
+            Controls.Add(labelTitle);
+            Controls.Add(labelFilms);
+            Name = "Form1";
+            Text = "Фильмы";
+            ((System.ComponentModel.ISupportInitialize)dataGridViewFilms).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private System.Windows.Forms.Label labelFilms;
-        private System.Windows.Forms.ListBox listBoxFilms;
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.TextBox textBoxTitle;
         private System.Windows.Forms.Label labelGenre;
@@ -208,5 +209,6 @@
         private System.Windows.Forms.TextBox textBoxSearchYear;
         private System.Windows.Forms.Button buttonSearchYear;
         private System.Windows.Forms.Button buttonGroupByGenre;
+        private DataGridView dataGridViewFilms;
     }
 }
